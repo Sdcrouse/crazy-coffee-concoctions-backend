@@ -1,5 +1,11 @@
 # README
 
+## License
+
+Licensed under the [MIT License](LICENSE).
+
+## Readme instructions (Delete this when completed)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
