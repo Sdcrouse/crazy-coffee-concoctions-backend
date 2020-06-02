@@ -1,5 +1,8 @@
 # README
 
+## Frontend
+The HTML/CSS/JavaScript frontend for this project is located [here](https://github.com/Sdcrouse/crazy-coffee-concoctions-frontend).
+
 ## License
 
 Licensed under the [MIT License](LICENSE).
