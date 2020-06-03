@@ -23,7 +23,7 @@ brewed = Concoction.create(
 
 craziest = Concoction.create(
   name: "The Craziest Coffee Concoction of Them All",
-  instructions: "Mix all ingredients together, except for the whipped cream and sprinkles. Top with whipped cream and sprinkles. Serve at your own risk.",
+  instructions: "Steep the coffees (except Maxwell House) and boiling water for a half hour. Mix in everything else except the last two ingredients. Top with whipped cream and sprinkles. Serve at your own risk.",
   notes: "I don't think I'm brave enough to try this! And if anyone serves this to me as a prank, I will be sure to retaliate in full."
 )
 
@@ -50,10 +50,27 @@ brewed.ingredients.create([
 ])
 
 craziest.ingredients.create([
+  {amount: "9 fl oz", name: "boiling water"},
   {amount: "1 packet", name: "Sweet and Low sugar"},
   {amount: "1 tsp", name: "Tabasco Sauce"},
   {amount: "1 tsp", name: "Strawberry Cheesecake creamer"},
   {amount: "1/4 tsp", name: "garlic salt"},
   {amount: "1 dollop", name: "whipped cream"},
   {amount: "1 pinch", name: "rainbow sprinkles"}
+])
+
+# Coffees:
+mocha.coffees.create(amount: "2 tsp", brand: "Folger's", variety: "Regular Instant")
+
+crazy_instant.coffees.create([
+  {amount: "1 tsp", brand: "Folger's", variety: "Regular Instant"},
+  {amount: "1 tsp", brand: "Yuban", variety: "Regular Instant"}
+])
+
+brewed.coffees.create(amount: "3 tsp", brand: "Archer Farms", variety: "Maple Pecan")
+
+craziest.coffees.create([
+  {amount: "1 tsp", brand: "Starbucks", variety: "Peppermint Mocha"},
+  {amount: "1 tsp", brand: "Hawaiian Isles Kona Coffee Co", variety: "Chocolate Coconut"},
+  {amount: "2/3 tsp", brand: "Maxwell House", variety: "Orange Cafe (Instant)"}
 ])
