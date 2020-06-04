@@ -29,9 +29,9 @@ craziest = Concoction.create(
 
 # Ingredients:
 mocha.ingredients.create([
-  {category: "liquid", amount: "8 fl oz", name: "hot water"},
+  {category: "liquid", amount: "8 fl oz", name: "hot milk"},
   {category: "sweetener", amount: "1 tsp", name: "sugar"},
-  {category: "other", amount: "1 tsp", name: "vanilla creamer"},
+  {category: "creamer", amount: "1 tsp", name: "vanilla creamer"},
   {category: "other", amount: "1 tsp", name: "chocolate syrup"}
 ])
 
