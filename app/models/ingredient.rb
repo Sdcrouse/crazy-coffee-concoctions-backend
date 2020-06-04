@@ -1,3 +1,3 @@
 class Ingredient < ApplicationRecord
-  # belongs_to :concoction
+  belongs_to :concoction
 end

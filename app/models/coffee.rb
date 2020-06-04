@@ -1,3 +1,3 @@
 class Coffee < ApplicationRecord
-  # belongs_to :concoction
+  belongs_to :concoction
 end
