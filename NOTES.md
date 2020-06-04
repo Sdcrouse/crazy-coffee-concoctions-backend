@@ -35,3 +35,7 @@ let concoction = {
   * This may or may not somehow include Coffees - maybe a polymorphic association, i.e. the join model could belong to an Ingredient OR Coffee?
   * The join model would have a concoction_id, ingredient_id, amount, brand, etc
   * An Ingredient would have a name and category
+
+  ## For future reference
+  * Be sure to run migrations in separate branches BEFORE merging them into master. A master branch with migration files that may or may not work, is a BAD idea!
+  * To make the app run as fast as possible, it is SUPER important to index your foreign keys/associations!
