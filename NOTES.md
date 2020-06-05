@@ -36,6 +36,12 @@ let concoction = {
   * The join model would have a concoction_id, ingredient_id, amount, brand, etc
   * An Ingredient would have a name and category
 
-  ## For future reference
-  * Be sure to run migrations in separate branches BEFORE merging them into master. A master branch with migration files that may or may not work, is a BAD idea!
-  * To make the app run as fast as possible, it is SUPER important to index your foreign keys/associations!
+### Easter Egg stretch goal
+Make use of the HTTP status 418 "I'm a teapot". You can't brew coffee with a teapot.
+I could do this when a user specifies "teapot" as an Ingredient and/or puts "Brew coffee with a teapot" in the instructions.
+See https://httpstatuses.com/418 and https://tools.ietf.org/html/rfc2324#section-2.3.2 and https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418
+(There also seems to be a "coffee" URI scheme.)
+
+## For future reference
+* Be sure to run migrations in separate branches BEFORE merging them into master. A master branch with migration files that may or may not work, is a BAD idea!
+* To make the app run as fast as possible, it is SUPER important to index your foreign keys/associations!
