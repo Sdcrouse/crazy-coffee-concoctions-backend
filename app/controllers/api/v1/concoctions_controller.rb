@@ -5,6 +5,11 @@ class Api::V1::ConcoctionsController < ApplicationController
   end
 
   def show
-    render plain: "You've rendered the /api/v1/concoctions/#{params[:id]} route!"
+    concoction = Concoction.find_by_id(params[:id])
+    if concoction
+      render json: concoction, status: :accepted
+    else
+      render status: :not_found
+    end
   end
 end
