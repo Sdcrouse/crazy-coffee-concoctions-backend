@@ -7,7 +7,9 @@ class Api::V1::ConcoctionsController < ApplicationController
   def show
     concoction = Concoction.find_by_id(params[:id])
     if concoction
-      render json: concoction, status: :accepted
+      # options = { include: [:coffees, :ingredients] }
+      # render json: ConcoctionSerializer.new(concoction, options), status: :accepted
+      render json: ConcoctionSerializer.new(concoction), status: :accepted
     else
       render status: :not_found
     end
