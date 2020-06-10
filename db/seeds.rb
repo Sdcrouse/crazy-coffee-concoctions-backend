@@ -27,6 +27,11 @@ craziest = Concoction.create(
   notes: "I don't think I'm brave enough to try this! And if anyone serves this to me as a prank, I will be sure to retaliate in full."
 )
 
+basic_coffee = Concoction.create(
+  name: "Plain ol' Espresso",
+  instructions: "Steep coffee in boiling water for 5-10 minutes, or to desired strength. Enjoy!"
+)
+
 # Ingredients:
 mocha.ingredients.create([
   {category: "liquid", amount: "8 fl oz", name: "hot milk"},
@@ -59,6 +64,8 @@ craziest.ingredients.create([
   {category: "other", amount: "1 pinch", name: "rainbow sprinkles"}
 ])
 
+basic_coffee.ingredients.create(category: "liquid", amount: "1 cup", name: "boiling water")
+
 # Coffees:
 mocha.coffees.create(amount: "2 tsp", brand: "Folger's", variety: "Instant Classic Roast")
 
@@ -74,3 +81,5 @@ craziest.coffees.create([
   {amount: "1 tsp", brand: "Hawaiian Isles Kona Coffee Co", variety: "Chocolate Coconut"},
   {amount: "2/3 tsp", brand: "Maxwell House", variety: "Orange Cafe"}
 ])
+
+basic_coffee.coffees.create(amount: "2 tsp", variety: "Espresso")
