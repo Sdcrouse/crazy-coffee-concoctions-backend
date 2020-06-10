@@ -46,6 +46,7 @@ See https://httpstatuses.com/418 and https://tools.ietf.org/html/rfc2324#section
 * A Concoction needs a name, instructions, and at least one coffee; notes and Ingredients are optional
 * A Coffee (unless left blank) needs an amount, variety, and concoction_id (edge case); brand is optional
 * An Ingredient (unless left blank) needs an amount, name, category, and concoction_id (the latter two are edge cases, unless the user knows how to hack the DOM)
+* A basic cup of coffee includes ground coffee and a liquid, so a Concoction should have an Ingredient whose category is "liquid"
 
 ## For future reference
 * Be sure to run migrations in separate branches BEFORE merging them into master. A master branch with migration files that may or may not work, is a BAD idea!
