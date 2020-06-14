@@ -13,4 +13,7 @@ class Api::V1::ConcoctionsController < ApplicationController
       render status: :not_found
     end
   end
+
+  def create
+  end
 end
