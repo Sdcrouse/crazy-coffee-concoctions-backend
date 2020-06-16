@@ -33,5 +33,15 @@ class Api::V1::ConcoctionsController < ApplicationController
     #     ]
     #   }
     # }
+
+    puts params
+    concoction = Concoction.new(concoction_params)
+    puts concoction, concoction.name, concoction.instructions, concoction.notes
+    render json: concoction
   end
+
+  private
+    def concoction_params
+      params.require(:concoction).permit(:name, :instructions, :notes)
+    end
 end
