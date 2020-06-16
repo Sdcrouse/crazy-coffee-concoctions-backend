@@ -40,6 +40,9 @@ class Api::V1::ConcoctionsController < ApplicationController
     coffee = concoction.coffees[0]
     puts coffee.amount, coffee.brand, coffee.variety
 
+    ingredient = concoction.ingredients[0]
+    puts ingredient.category, ingredient.amount, ingredient.name
+
     render json: concoction
   end
 
@@ -47,7 +50,8 @@ class Api::V1::ConcoctionsController < ApplicationController
     def concoction_params
       params.require(:concoction).permit(
         :name, :instructions, :notes,
-        coffees_attributes: [:amount, :brand, :variety]
+        coffees_attributes: [:amount, :brand, :variety],
+        ingredients_attributes: [:category, :amount, :name]
       )
     end
 end
