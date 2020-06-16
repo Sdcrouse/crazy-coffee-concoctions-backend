@@ -4,4 +4,7 @@ class Concoction < ApplicationRecord
 
   accepts_nested_attributes_for :coffees, 
     reject_if: proc{ |attrs| attrs[:amount].blank? && attrs[:brand].blank? && attrs[:variety].blank? }
+
+  accepts_nested_attributes_for :ingredients,
+    reject_if: proc{ |attrs| attrs[:amount].blank? && attrs[:name].blank? }
 end
