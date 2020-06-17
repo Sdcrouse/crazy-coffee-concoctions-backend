@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do # Version 1
-      resources :concoctions, only: [:index, :show]
+      resources :concoctions, only: [:index, :show, :create]
     end
   end
 
