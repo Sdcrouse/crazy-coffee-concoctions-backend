@@ -17,7 +17,8 @@ class Api::V1::ConcoctionsController < ApplicationController
   def create
     concoction = Concoction.new(concoction_params)
     if concoction.save
-      render json: concoction, status: :accepted
+      options = { include: [:coffees, :ingredients] }
+      render json: ConcoctionSerializer.new(concoction, options), status: :accepted
     else
       # Note: I don't think this will get executed until I have Concoction validations.
       render json: { errors: concoction.errors.full_messages }, status: :unprocessable_entity
