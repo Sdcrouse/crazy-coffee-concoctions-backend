@@ -16,7 +16,9 @@ class Api::V1::ConcoctionsController < ApplicationController
 
   def create
     concoction = Concoction.new(concoction_params)
-    if concoction.save
+    if turn_server_into_teapot?
+      render json: {error: "I am a teapot"}, status: 418
+    elsif concoction.save
       options = { include: [:coffees, :ingredients] }
       render json: ConcoctionSerializer.new(concoction, options), status: :accepted
     else
@@ -32,5 +34,13 @@ class Api::V1::ConcoctionsController < ApplicationController
         coffees_attributes: [:amount, :brand, :variety],
         ingredients_attributes: [:category, :amount, :name]
       )
+    end
+
+    def turn_server_into_teapot?
+      # In a future version, I could also look for a teapot as one of the ingredients.
+      instructions = params[:concoction][:instructions]
+
+      instructions.include?("Brew coffee with a teapot") ||
+      instructions.include?("Change server into a teapot")
     end
 end
