@@ -31,6 +31,7 @@ let concoction = {
 * Let users add their own reviews and ratings ("I do/don't want to try this", "I'm not sure about this", "I've tried it and loved/hated it", etc)
 * Allow users to edit and delete their coffee concoctions
 * For added humor, re-write part of the app with CoffeeScript
+* Use the Mocha framework to add frontend tests to my app
 * Create a many-to-many relationship between Concoctions and Ingredients
   * This may or may not somehow include Coffees - maybe a polymorphic association, i.e. the join model could belong to an Ingredient OR Coffee?
   * The join model would have a concoction_id, ingredient_id, amount, brand, etc
